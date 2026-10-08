@@ -40,7 +40,8 @@ https://xctech.cz/nastroje/pomer-stran-dcp/
 | `XCT-F190-F210_TST-1_C_XX-XX_INT-TD_MOS_4K_NULL_20261008_NUL_SMPTE_OV.zip` | 493 MB | `07533cf34c757db2053f0f7fa7971190cd27b9b258ec152c93e4f36d663c0256` |
 
 Framing lines with masking arrows and pixel offsets for F-190 (1998×1052) and F-210 (1998×952),
-plus Flat (1998×1080), Scope (2048×858) and 16:9 (1920×1080) for reference. 4K doubles every dimension.
+plus Flat (1998×1080), Scope (2048×858) and 16:9 (1920×1080) for reference. In 4K: F-190 3996×2104,
+F-210 3996×1902, Flat 3996×2160, Scope 4096×1716, 16:9 3840×2160.
 
 ## Usage
 
