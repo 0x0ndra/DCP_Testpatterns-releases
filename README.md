@@ -15,6 +15,7 @@ See [**Releases**](../../releases) for the latest DCPs:
 | `XctechDCIAlign_4K_Full` | Full 1.90 · 4096×2160 | 20 s still | Same, native 4K |
 | `XCT-F190-F210_…_2K` | Full 1.90 · 2048×1080 | 20 s still | Framing for F-190 and F-210 (DCNC letterbox-in-flat), with Flat, Scope and 16:9 for reference (2K) |
 | `XCT-F190-F210_…_4K` | Full 1.90 · 4096×2160 | 20 s still | Same, native 4K |
+| `XCT-SyncTest_…_2K` | Flat 1.85 · 1998×1080 | 1:03 | Audio/video sync: countdown, offset finder (-100 to +100 ms), real-life clapper, per-channel L / C / R / LFE |
 | `XCT-71-ChannelID_…_2K` | Flat 1.85 · 1998×1080 | 1:12 | 7.1 channel identification: spoken channel name, then 6 s pink noise per channel |
 
 The alignment chart is a single full-container image marking both **Flat
@@ -52,6 +53,18 @@ F-210 3996×1902, Flat 3996×2160, Scope 4096×1716, 16:9 3840×2160.
 16-channel PCM 24-bit / 48 kHz in the ISDCF Doc4 / 7.1 DS layout (L 1, R 2, C 3, LFE 4, Lss 5, Rss 6,
 Lrs 11, Rrs 12) with SMPTE MCA labels. Sequence L, C, R, LFE, Ls, Rs, Bsl, Bsr: spoken channel name,
 then 6 s pink noise at -20 dBFS RMS (LFE band-limited 30-120 Hz). Preview video on the page above.
+
+## Sync test: sync-test-v1.0 (2026-10-09)
+
+| File | Size | SHA-256 |
+|------|------|---------|
+| `XCT-SyncTest_TST-1_F_EN-XX_INT-TD_71_2K_NULL_20261009_NUL_SMPTE_OV.zip` | 1.35 GB | `49337bdca4ddde7481ad1a4ef3b9b54d0f73fa529eb267d5e447f0766bc51a3a` |
+
+Four parts: classic countdown (flash and 1 kHz beep on the same frame), offset finder (eleven flashes,
+each beep shifted by a known amount from -100 to +100 ms in 20 ms steps), real-life ping-pong ball and
+clapperboard, and the same click from L, C, R and LFE. Pick the offset pair that looks in sync: +40 means
+the sound comes 40 ms early (add 40 ms audio delay), -40 means it comes 40 ms late (remove 40 ms).
+Measured inside the finished DCP: worst error 0.13 ms. Watch from the reference seat, two-thirds back.
 
 ## Usage
 
