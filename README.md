@@ -15,7 +15,7 @@ See [**Releases**](../../releases) for the latest DCPs:
 | `XctechDCIAlign_4K_Full` | Full 1.90 · 4096×2160 | 20 s still | Same, native 4K |
 | `XCT-F190-F210_…_2K` | Full 1.90 · 2048×1080 | 20 s still | Framing for F-190 and F-210 (DCNC letterbox-in-flat), with Flat, Scope and 16:9 for reference (2K) |
 | `XCT-F190-F210_…_4K` | Full 1.90 · 4096×2160 | 20 s still | Same, native 4K |
-| `XctechAudioTest_71`     | Full 1.90 · 2048×1080 | 32 s | 7.1 channel-by-channel verification (spoken name + tone). **In preparation, not released yet.** |
+| `XCT-71-ChannelID_…_2K` | Flat 1.85 · 1998×1080 | 1:12 | 7.1 channel identification: spoken channel name, then 6 s pink noise per channel |
 
 The alignment chart is a single full-container image marking both **Flat
 (1998×1080)** and **Scope (2048×858)** boundaries, so it is usable whichever
@@ -42,6 +42,16 @@ https://xctech.cz/nastroje/pomer-stran-dcp/
 Framing lines with masking arrows and pixel offsets for F-190 (1998×1052) and F-210 (1998×952),
 plus Flat (1998×1080), Scope (2048×858) and 16:9 (1920×1080) for reference. In 4K: F-190 3996×2104,
 F-210 3996×1902, Flat 3996×2160, Scope 4096×1716, 16:9 3840×2160.
+
+## Audio channel test 7.1: audio-71-v2.0 (2026-10-08)
+
+| File | Size | SHA-256 |
+|------|------|---------|
+| `XCT-71-ChannelID_TST-1_F_EN-XX_INT-TD_71_2K_NULL_20261008_NUL_SMPTE_OV.zip` | 992 MB | `2fcf697bae1e3e4fdb9e8367d9e7235e3e8a7a57ca80bc8fc9f6f042d52d24bd` |
+
+16-channel PCM 24-bit / 48 kHz in the ISDCF Doc4 / 7.1 DS layout (L 1, R 2, C 3, LFE 4, Lss 5, Rss 6,
+Lrs 11, Rrs 12) with SMPTE MCA labels. Sequence L, C, R, LFE, Ls, Rs, Bsl, Bsr: spoken channel name,
+then 6 s pink noise at -20 dBFS RMS (LFE band-limited 30-120 Hz). Preview video on the page above.
 
 ## Usage
 
