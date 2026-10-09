@@ -17,6 +17,7 @@ See [**Releases**](../../releases) for the latest DCPs:
 | `XCT-F190-F210_…_4K` | Full 1.90 · 4096×2160 | 20 s still | Same, native 4K |
 | `XCT-SyncTest_…_2K` | Flat 1.85 · 1998×1080 | 1:03 | Audio/video sync: countdown, offset finder (-100 to +100 ms), real-life clapper, per-channel L / C / R / LFE |
 | `XCT-71-ChannelID_…_2K` | Flat 1.85 · 1998×1080 | 1:12 | 7.1 channel identification: spoken channel name, then 6 s pink noise per channel |
+| `XCT-SyncMeter_…_2K` *(preview)* | Flat 1.85 · 1998×1080 | 1:05 | Companion test for the XC Sync Meter iPhone app: one flash and one chirp per second |
 
 The alignment chart is a single full-container image marking both **Flat
 (1998×1080)** and **Scope (2048×858)** boundaries, so it is usable whichever
@@ -65,6 +66,18 @@ each beep shifted by a known amount from -100 to +100 ms in 20 ms steps), real-l
 clapperboard, and the same click from L, C, R and LFE. Pick the offset pair that looks in sync: +40 means
 the sound comes 40 ms early (add 40 ms audio delay), -40 means it comes 40 ms late (remove 40 ms).
 Measured inside the finished DCP: worst error 0.13 ms. Watch from the reference seat, two-thirds back.
+
+## Sync Meter test (preview): sync-meter-v0.9 (2026-10-09)
+
+| File | Size | SHA-256 |
+|------|------|---------|
+| `XCT-SyncMeter_TST-1_F_XX-XX_71_2K_NULL_20261009_NUL_SMPTE_OV.zip` | 0.51 GB | `6005f1fd54df2e2adb03dcd406f2a777fae593b92296674584ee2f8ccd5c0e67` |
+
+Measurement signal for the XC Sync Meter iPhone app: a 5 s lead-in, then 60 events, one per second. Each event
+is a white disk on exactly one frame plus a 40 ms linear chirp (1.5 to 4 kHz) on the centre channel, starting on
+that frame. The app films the screen at 240 fps and finds the chirp with a matched filter, so it reports the
+system's audio delay in milliseconds. Measure 5 m from the screen on the centre line and set the distance to 5.0 m.
+Verified inside the finished DCP with the app's method: 60 / 60 events, 0.000 ms. Preview build; the design will change.
 
 ## Usage
 
