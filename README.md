@@ -18,9 +18,7 @@ See [**Releases**](../../releases) for the latest DCPs:
 | `XCT-SyncTest_…_2K` | Flat 1.85 · 1998×1080 | 1:03 | Audio/video sync: countdown, offset finder (-100 to +100 ms), real-life clapper, per-channel L / C / R / LFE |
 | `XCT-71-ChannelID_…_2K` | Flat 1.85 · 1998×1080 | 1:12 | 7.1 channel identification: spoken channel name, then 6 s pink noise per channel |
 | `XCT-SyncMeter_…_2K` *(preview)* | Flat 1.85 · 1998×1080 | 1:05 | Companion test for the XC Sync Meter iPhone app: one flash and one chirp per second |
-| `XCT-GongModern_…_51/71` | Flat 1.85 · 1998×1080 | 0:08.5 | Cinema gong before the show: three notes travel from the back of the hall to the screen (5.1 / 7.1) |
-| `XCT-GongCinematic_…_51/71` | Flat 1.85 · 1998×1080 | 0:08.5 | Same gong with timpani roll, horns and choir |
-| `XCT-GongKlasik_…_51/71` | Flat 1.85 · 1998×1080 | 0:12 | Classic three-tone cinema gong (high, middle, deep) |
+| `XCT-Gong{Modern,Cinematic,Klasik}_…_51/71` | Flat 1.85 · 1998×1080 | 0:08–0:12 | Cinema gong before the show, 5.1 / 7.1 |
 
 The alignment chart is a single full-container image marking both **Flat
 (1998×1080)** and **Scope (2048×858)** boundaries, so it is usable whichever
@@ -93,12 +91,7 @@ Verified inside the finished DCP with the app's method: 60 / 60 events, 0.000 ms
 | `XCT-GongKlasik_XSN-1_F_XX-XX_INT-TD_51_2K_NULL_20261013_NUL_SMPTE_OV.zip` | 121 MB | `19cee062c03c04a4cb93ca8bcbd29e09293fbb15a9f2b4f08fdd9f7e52575b24` |
 | `XCT-GongKlasik_XSN-1_F_XX-XX_INT-TD_71_2K_NULL_20261013_NUL_SMPTE_OV.zip` | 121 MB | `7a19acfc390dc2cbaddfbff6c46adb826aaf149002ee7f23ea855fda222dee04` |
 
-Three gongs to open a show, each in 5.1 and 7.1 DS (16-channel PCM 24-bit / 48 kHz, SMPTE MCA labels), black picture,
-content type XSN. **Modern**: three soft metallic notes move from behind the audience over the side walls to the screen
-and land on a warm chord with a felt sub in the LFE. **Cinematic**: the same motif with a timpani roll, horns and a soft
-choir. **Klasik**: the classic three-tone gong, high, middle, deep. Synthesised sound, no samples. Reference level: at
-fader 7 the loudest second in the centre channel is 85 dBC (peaks about -9 dBFS), never louder than the feature.
-For 7.1 set the processor to 7.1 DS.
+Gong before the show in 5.1 and 7.1 DS, black picture, XSN. Reference level (fader 7). Details: https://xctech.cz/nastroje/dcp-gongy/
 
 ## Usage
 
